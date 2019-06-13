@@ -1,7 +1,213 @@
 * {
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing; border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing; border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+.sidebar {
+  position: fixed;
+  top: 20rem;
+  margin-left: 20rem;
+  max-width: 18rem;
+  min-width: 13.2rem;
+  width: 21.217%;
+}
+
+.side-title {
+  position: relative;
+  right: 15%;
+
+  margin-top: -1.2rem;
+  float: right;
+  clear: both;
+}
+
+.side-title a {
+  font-size: 1.6em;
+
+}
+
+.title-border {
+  background-color: #d9cbc7;
+  margin-top: .5rem;
+  width: 100%;
+  height: .1rem;
+  box-shadow: inset 2.4rem 0 1.7rem -.6rem #fff,
+  inset -2.4rem 0 1.7rem -.6rem #fff;
+}
+
+.side-info {
+  padding-bottom: 1rem;
+  margin-top: .76rem;
+  width: 100%;
+  max-height: 45%;
+  border-bottom: 1px solid #d9cbc7;
+  overflow: hidden;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tab {
+    background-color: rgba(115, 182, 230, 0);
+    position: relative;
+    margin-top: .2rem;
+    height: 2rem;
+    box-shadow: inset 120px 0 50px -15px #fff;
+    transition: all 200ms ease-in;
+}
+
+.nav-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-box::before {
+    content: '';
+    position: absolute;
+    background-color: #ababab;
+    width: 1.9rem;
+    height: 1.9rem;
+    left: 0;
+    bottom: 0;
+}
+
+.nav-box::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    background-color: #ffedae;
+    width: .7rem;
+    height: .7rem;
+    left: .5rem;
+    bottom: .7rem;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 4px #ffcd71;
+    animation: glow 900ms ease-in-out 0s infinite normal;
+    animation-play-state: paused;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 15px 4px #ffcd71;
+    }
+    65% {
+        box-shadow: 0 0 15px 6px #ffcd71;
+    }
+    100% {
+        box-shadow: 0 0 15px 4px #ffcd71;
+    }
+}
+
+.nav-box i {
+    background-color: #ababab;
+    position: absolute;
+    width: 100%;
+    height: .2rem;
+    bottom: 0;
+}
+
+.nav-box b {
+    opacity: 0;
+    background-color: #ababab;
+    position: absolute;
+    width: 100%;
+    height: .2rem;
+    bottom: 0;
+}
+
+.nav-link {
+    position: absolute;
+    margin-left: 2.5rem;
+    bottom: .4rem;
+}
+
+.nav-link a {
+    color: #ababab;
+    text-transform: uppercase;
+}
+
+.tab:hover .nav-box::before, .follow .nav-box.toggle::before {
+    background-color: #ababab;
+    animation: flash 700ms ease 0s 1 normal;
+    box-shadow: inset 3px 3px 0 0 #dedede,
+        inset -3px -3px 0 0 #dedede, 1px 1px 0 0 #ababab;
+    -webkit-transform: translate(-.1rem, -.1rem);
+    -ms-transform: translate(-.1rem, -.1rem);
+    transform: translate(-.1rem, -.1rem);
+}
+
+@keyframes flash {
+    0% {
+        background-color: #ffedae;
+    }
+    100% {
+        background-color: #ababab;
+    }
+}
+
+.tab:hover .nav-box::after, .follow .nav-box.toggle::after {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+.tab:hover .nav-box b {
+    opacity: 1;
+    background-color: #dedede;
+    width: 100%;
+    animation: length 900ms ease-in 0s 1 normal;
+    -webkit-transform: translate(-.1rem, -.1rem);
+    -ms-transform: translate(-.1rem, -.1rem);
+    transform: translate(-.1rem, -.1rem);
+}
+
+@keyframes length {
+    0% {
+        width: 25%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.tab:hover .nav-link {
+    -webkit-transform: translate(-.1rem, -.1rem);
+    -ms-transform: translate(-.1rem, -.1rem);
+    transform: translate(-.1rem, -.1rem);
+    text-shadow: .1rem .1rem #ababab;
+}
+
+.tab:hover .nav-link a {color: #969292;}
+
+.tab:hover {
+    background-color: #c5dbd9;
+}
+
+.pagination {
+    margin-top: .2rem;
+    text-align: center;
+}
+
+.current-page, .current-prev-arrow, .current-next-arrow {color: #969292;}
+
+.current-prev-arrow {
+
+        display: none;
+
+}
+
+.current-next-arrow {
+
+        display: none;
+
+}
+
+a#prev-arrow, a#next-arrow {color: #000;}
+
+.pagination a, .current-page, .current-prev-arrow, .current-next-arrow {padding: 0 .4rem;}
