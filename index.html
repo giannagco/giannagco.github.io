@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>gianna's site</title>
+  <link rel="shortcut icon" href="snek64.png"/>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="sidebar">
-    <div class="side-title"><a href="/">another</a></div>
+    <div class="side-title"><a href="/">gianna cortes</a></div>
     <div class="title-border"></div>
     <div class="side-info">
       <div class="desc-wrap"><div class="desc"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mattis vulputate enim nulla aliquet. A iaculis at erat pellentesque adipiscing commodo.</p></div></div>
@@ -22,11 +23,11 @@
       </div>
       <div class="tab">
         <div class="nav-box"><i></i><b></b></div>
-        <div class="nav-link"><a href="/" class="not">github</a></div>
+        <div class="nav-link"><a href="https://github.com/giannagco" class="not">github</a></div>
       </div>
       <div class="tab">
         <div class="nav-box"><i></i><b></b></div>
-        <div class="nav-link"><a href="/" class="not">instagram</a></div>
+        <div class="nav-link"><a href="https://www.instagram.com/graviga" class="not">instagram</a></div>
       </div>
     </div>
     <div class="title-border"></div>
@@ -40,21 +41,5 @@
       <div class="divider"><i></i><b></b></div>
     </div>
   </div>
-  <script>
-  $(document).on({
-    mouseenter: function (e) {
-      if($(".select-link").length) {
-        $(".select").remove();
-        $(".select-link").contents().unwrap();
-      }
-      $(e.currentTarget).wrap("<div class='select-link' style='display:inline-block;'></div>");
-      $(e.currentTarget).after("<div class='select'></div>");
-      $(".select").animate({opacity: '1'}, 500);
-    },
-    mouseleave: function (e) {
-      $(".select").animate({opacity: '0'}, 500);
-    }
-  }, "a:not(.nav-link a)");
-</script>
 </body>
 </html>
