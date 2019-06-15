@@ -24,26 +24,26 @@
 html {font-size: 62.5%;}
 
 body {
-    color: var(--body-font);
-    background: var(--main-bg-color);
-    font-family: Georgia, serif;
-    font-size: 1rem;
-    overflow-x: hidden;
+  color: var(--body-font);
+  background: var(--main-bg-color);
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  overflow-x: hidden;
 }
 
 a {
-    color: var(--links);
-    text-decoration: none;
-    transition: color 500ms ease-in-out;
+  color: var(--links);
+  text-decoration: none;
+  transition: color 500ms ease-in-out;
 }
 
 a:hover {
-    color: var(--links-hover);
+  color: var(--links-hover);
 }
 
 .sidebar {
   position: fixed;
-  top: 20rem;
+  top: 35%;
   margin-left: 20rem;
   max-width: 18rem;
   min-width: 13.2rem;
@@ -53,7 +53,6 @@ a:hover {
 .side-title {
   position: relative;
   right: 15%;
-
   margin-top: -1.2rem;
   float: right;
   clear: both;
@@ -83,261 +82,263 @@ a:hover {
 }
 
 .nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .tab {
-    background-color: rgba(115, 182, 230, 0);
-    position: relative;
-    margin-top: .2rem;
-    height: 2rem;
-    box-shadow: inset 120px 0 50px -15px var(--main-bg-color);
-    transition: all 200ms ease-in;
+  background-color: rgba(115, 182, 230, 0);
+  position: relative;
+  margin-top: .2rem;
+  height: 2rem;
+  box-shadow: inset 120px 0 50px -15px var(--main-bg-color);
+  transition: all 200ms ease-in;
 }
 
 .nav-box {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-box::before {
-    content: '';
-    position: absolute;
-    background-color: var(--tab-shadow);
-    width: 1.9rem;
-    height: 1.9rem;
-    left: 0;
-    bottom: 0;
+  content: '';
+  position: absolute;
+  background-color: var(--tab-shadow);
+  width: 1.9rem;
+  height: 1.9rem;
+  left: 0;
+  bottom: 0;
 }
 
 .nav-box::after {
-    opacity: 0;
-    content: '';
-    position: absolute;
-    background-color: #ffedae;
-    width: .7rem;
-    height: .7rem;
-    left: .5rem;
-    bottom: .7rem;
-    border-radius: 50%;
-    box-shadow: 0 0 15px 4px #ffcd71;
-    animation: glow 900ms ease-in-out 0s infinite normal;
-    animation-play-state: paused;
+  opacity: 0;
+  content: '';
+  position: absolute;
+  background-color: #ffedae;
+  width: .7rem;
+  height: .7rem;
+  left: .5rem;
+  bottom: .7rem;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 4px #ffcd71;
+  animation: glow 900ms ease-in-out 0s infinite normal;
+  animation-play-state: paused;
 }
 
 @keyframes glow {
-    0% {
-        box-shadow: 0 0 15px 4px #ffcd71;
-    }
-    65% {
-        box-shadow: 0 0 15px 6px #ffcd71;
-    }
-    100% {
-        box-shadow: 0 0 15px 4px #ffcd71;
-    }
+  0% {
+    box-shadow: 0 0 15px 4px #ffcd71;
+  }
+  65% {
+    box-shadow: 0 0 15px 6px #ffcd71;
+  }
+  100% {
+    box-shadow: 0 0 15px 4px #ffcd71;
+  }
 }
 
 .nav-box i {
-    background-color: var(--tab-shadow);
-    position: absolute;
-    width: 100%;
-    height: .2rem;
-    bottom: 0;
+  background-color: var(--tab-shadow);
+  position: absolute;
+  width: 100%;
+  height: .2rem;
+  bottom: 0;
 }
 
 .nav-box b {
-    opacity: 0;
-    background-color: var(--tab-shadow);
-    position: absolute;
-    width: 100%;
-    height: .2rem;
-    bottom: 0;
+  opacity: 0;
+  background-color: var(--tab-shadow);
+  position: absolute;
+  width: 100%;
+  height: .2rem;
+  bottom: 0;
 }
 
 .nav-link {
-    position: absolute;
-    margin-left: 2.5rem;
-    bottom: .4rem;
+  position: absolute;
+  margin-left: 2.5rem;
+  bottom: .4rem;
 }
 
 .nav-link a {
-    color: var(--tab-links-shadow);
-    text-transform: uppercase;
+  color: var(--tab-links-shadow);
+  text-transform: uppercase;
 }
 
 .tab:hover .nav-box::before, .follow .nav-box.toggle::before {
-    background-color: var(--tab-shadow);
-    animation: flash 700ms ease 0s 1 normal;
-    box-shadow: inset 3px 3px 0 0 var(--glow-box),
-        inset -3px -3px 0 0 var(--glow-box), 1px 1px 0 0 var(--tab-shadow);
-    -webkit-transform: translate(-.1rem, -.1rem);
-    -ms-transform: translate(-.1rem, -.1rem);
-    transform: translate(-.1rem, -.1rem);
+  background-color: var(--tab-shadow);
+  animation: flash 700ms ease 0s 1 normal;
+  box-shadow: inset 3px 3px 0 0 var(--glow-box),
+  inset -3px -3px 0 0 var(--glow-box), 1px 1px 0 0 var(--tab-shadow);
+  -webkit-transform: translate(-.1rem, -.1rem);
+  -ms-transform: translate(-.1rem, -.1rem);
+  transform: translate(-.1rem, -.1rem);
 }
 
 @keyframes flash {
-    0% {
-        background-color: #ffedae;
-    }
-    100% {
-        background-color: var(--tab-shadow);
-    }
+  0% {
+    background-color: #ffedae;
+  }
+  100% {
+    background-color: var(--tab-shadow);
+  }
 }
 
 .tab:hover .nav-box::after, .follow .nav-box.toggle::after {
-    opacity: 1;
-    animation-play-state: running;
+  opacity: 1;
+  animation-play-state: running;
 }
 
 .tab:hover .nav-box b {
-    opacity: 1;
-    background-color: var(--glow-box);
-    width: 100%;
-    animation: length 900ms ease-in 0s 1 normal;
-    -webkit-transform: translate(-.1rem, -.1rem);
-    -ms-transform: translate(-.1rem, -.1rem);
-    transform: translate(-.1rem, -.1rem);
+  opacity: 1;
+  background-color: var(--glow-box);
+  width: 100%;
+  animation: length 900ms ease-in 0s 1 normal;
+  -webkit-transform: translate(-.1rem, -.1rem);
+  -ms-transform: translate(-.1rem, -.1rem);
+  transform: translate(-.1rem, -.1rem);
 }
 
 @keyframes length {
-    0% {
-        width: 25%;
-    }
-    100% {
-        width: 100%;
-    }
+  0% {
+    width: 25%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .tab:hover .nav-link {
-    -webkit-transform: translate(-.1rem, -.1rem);
-    -ms-transform: translate(-.1rem, -.1rem);
-    transform: translate(-.1rem, -.1rem);
-    text-shadow: .1rem .1rem var(--tab-links-shadow);
+  -webkit-transform: translate(-.1rem, -.1rem);
+  -ms-transform: translate(-.1rem, -.1rem);
+  transform: translate(-.1rem, -.1rem);
+  text-shadow: .1rem .1rem var(--tab-links-shadow);
 }
 
 .tab:hover .nav-link a {color: var(--tab-links);}
 
 .tab:hover {
-    background-color: var(--tab-fade);
+  background-color: var(--tab-fade);
 }
 
 .container {
-    margin-left: var(--post-size);
-    max-width: 54rem;
-    width: 64%;
-    float: left;
+  position: fixed;
+  top: 40%;
+  margin-left: var(--post-size);
+  max-width: 54rem;
+  width: 64%;
+  float: left;
 }
 
 .post {
-    margin: 0 auto;
-    max-width: var(--post-size);
+  margin: 0 auto;
+  max-width: var(--post-size);
 }
 
 .divider {
-    position: relative;
-    background-color: var(--dividers);
-    max-width: var(--post-size);
-    margin: 1rem auto;
-    height: .6rem;
+  position: relative;
+  background-color: var(--dividers);
+  max-width: var(--post-size);
+  margin: 1rem auto;
+  height: .6rem;
 }
 
 .divider::before {
-    content: '';
-    position: absolute;
-    margin-left: -.4rem;
-    border-width: .3rem .4rem .3rem 0rem;
-    border-style: solid;
-    border-color: transparent var(--dividers) transparent transparent;
+  content: '';
+  position: absolute;
+  margin-left: -.4rem;
+  border-width: .3rem .4rem .3rem 0rem;
+  border-style: solid;
+  border-color: transparent var(--dividers) transparent transparent;
 }
 
 .divider::after {
-    content: '';
-    position: absolute;
-    margin-left: 100%;
-    border-width: .3rem 0rem .3rem .4rem;
-    border-style: solid;
-    border-color: transparent transparent transparent var(--dividers);
+  content: '';
+  position: absolute;
+  margin-left: 100%;
+  border-width: .3rem 0rem .3rem .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--dividers);
 }
 
 .divider i {
-    background-color: var(--dividers);
-    position: absolute;
-    margin-top: .15rem;
-    margin-left: -.8rem;
-    height: .4rem;
-    width: .4rem;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  background-color: var(--dividers);
+  position: absolute;
+  margin-top: .15rem;
+  margin-left: -.8rem;
+  height: .4rem;
+  width: .4rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .divider i::before {
-    content: '';
-    position: absolute;
-    border-width: .3rem 0rem .3rem .4rem;
-    border-style: solid;
-    border-color: transparent transparent transparent var(--dividers);
-    -webkit-transform-origin: 0% 50%;
-    -ms-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    -webkit-transform: rotate(-45deg) translate(-.4rem, .1rem);
-    -ms-transform: rotate(-45deg) translate(-.4rem, .1rem);
-    transform: rotate(-45deg) translate(-.4rem, .1rem);
+  content: '';
+  position: absolute;
+  border-width: .3rem 0rem .3rem .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--dividers);
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotate(-45deg) translate(-.4rem, .1rem);
+  -ms-transform: rotate(-45deg) translate(-.4rem, .1rem);
+  transform: rotate(-45deg) translate(-.4rem, .1rem);
 }
 
 .divider i::after {
-    content: '';
-    position: absolute;
-    border-width: .3rem 1.4rem .3rem 0rem;
-    border-style: solid;
-    border-color: transparent var(--dividers) transparent transparent;
-    -webkit-transform-origin: 0% 50%;
-    -ms-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    -webkit-transform: rotate(-45deg) translate(-1.8rem, .1rem);
-    -ms-transform: rotate(-45deg) translate(-1.8rem, .1rem);
-    transform: rotate(-45deg) translate(-1.8rem, .1rem);
+  content: '';
+  position: absolute;
+  border-width: .3rem 1.4rem .3rem 0rem;
+  border-style: solid;
+  border-color: transparent var(--dividers) transparent transparent;
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotate(-45deg) translate(-1.8rem, .1rem);
+  -ms-transform: rotate(-45deg) translate(-1.8rem, .1rem);
+  transform: rotate(-45deg) translate(-1.8rem, .1rem);
 }
 
 .divider b {
-    background-color: var(--dividers);
-    position: absolute;
-    margin-top: .15rem;
-    margin-left: calc(100% + .4rem);
-    height: .4rem;
-    width: .4rem;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  background-color: var(--dividers);
+  position: absolute;
+  margin-top: .15rem;
+  margin-left: calc(100% + .4rem);
+  height: .4rem;
+  width: .4rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .divider b::before {
-    content: '';
-    position: absolute;
-    border-width: .3rem 0rem .3rem 1.4rem;
-    border-style: solid;
-    border-color: transparent transparent transparent var(--dividers);
-    -webkit-transform-origin: 0% 50%;
-    -ms-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    -webkit-transform: rotate(-45deg) translate(0.8rem, .1rem);
-    -ms-transform: rotate(-45deg) translate(0.8rem, .1rem);
-    transform: rotate(-45deg) translate(0.8rem, .1rem);
+  content: '';
+  position: absolute;
+  border-width: .3rem 0rem .3rem 1.4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--dividers);
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotate(-45deg) translate(0.8rem, .1rem);
+  -ms-transform: rotate(-45deg) translate(0.8rem, .1rem);
+  transform: rotate(-45deg) translate(0.8rem, .1rem);
 }
 
 .divider b::after {
-    content: '';
-    position: absolute;
-    border-width: .3rem .4rem .3rem 0rem;
-    border-style: solid;
-    border-color: transparent var(--dividers) transparent transparent;
-    -webkit-transform-origin: 0% 50%;
-    -ms-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    -webkit-transform: rotate(-45deg) translate(0.4rem, .1rem);
-    -ms-transform: rotate(-45deg) translate(0.4rem, .1rem);
-    transform: rotate(-45deg) translate(0.4rem, .1rem);
+  content: '';
+  position: absolute;
+  border-width: .3rem .4rem .3rem 0rem;
+  border-style: solid;
+  border-color: transparent var(--dividers) transparent transparent;
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotate(-45deg) translate(0.4rem, .1rem);
+  -ms-transform: rotate(-45deg) translate(0.4rem, .1rem);
+  transform: rotate(-45deg) translate(0.4rem, .1rem);
 }
