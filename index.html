@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="sidebar">
@@ -17,19 +18,15 @@
       </div>
       <div class="tab">
         <div class="nav-box"><i></i><b></b></div>
-        <div class="nav-link"><a href="/ask" class="not">inbox</a></div>
+        <div class="nav-link"><a href="/" class="not">contact</a></div>
       </div>
       <div class="tab">
         <div class="nav-box"><i></i><b></b></div>
-        <div class="nav-link"><a href="/archive" class="not">load</a></div>
+        <div class="nav-link"><a href="/" class="not">github</a></div>
       </div>
       <div class="tab">
         <div class="nav-box"><i></i><b></b></div>
-        <div class="nav-link"><a href="/" class="not">link 4</a></div>
-      </div>
-      <div class="tab">
-        <div class="nav-box"><i></i><b></b></div>
-        <div class="nav-link"><a href="/" class="not">link 5</a></div>
+        <div class="nav-link"><a href="/" class="not">instagram</a></div>
       </div>
     </div>
     <div class="title-border"></div>
@@ -43,5 +40,21 @@
       <div class="divider"><i></i><b></b></div>
     </div>
   </div>
+  <script>
+  $(document).on({
+    mouseenter: function (e) {
+      if($(".select-link").length) {
+        $(".select").remove();
+        $(".select-link").contents().unwrap();
+      }
+      $(e.currentTarget).wrap("<div class='select-link' style='display:inline-block;'></div>");
+      $(e.currentTarget).after("<div class='select'></div>");
+      $(".select").animate({opacity: '1'}, 500);
+    },
+    mouseleave: function (e) {
+      $(".select").animate({opacity: '0'}, 500);
+    }
+  }, "a:not(.nav-link a)");
+</script>
 </body>
 </html>
