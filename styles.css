@@ -21,6 +21,20 @@
   --post-size: 400px;
 }
 
+::-webkit-scrollbar {width:11px;}
+
+::-webkit-scrollbar-track {
+    border: 5px solid rgba(245, 245, 245, 0);
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border: 5px solid rgba(245, 245, 245, 0);
+    background-color: var(--dividers);
+
+}
+
 html {font-size: 62.5%;}
 
 body {
@@ -31,13 +45,13 @@ body {
   overflow-x: hidden;
 }
 
-a {
+a, .nav-link p {
   color: var(--links);
   text-decoration: none;
   transition: color 500ms ease-in-out;
 }
 
-a:hover {
+a:hover{
   color: var(--links-hover);
 }
 
@@ -86,6 +100,8 @@ a:hover {
   flex-direction: column;
   width: 100%;
 }
+
+.nav-link p {cursor: pointer;}
 
 .tab {
   background-color: rgba(115, 182, 230, 0);
@@ -162,7 +178,7 @@ a:hover {
   bottom: .4rem;
 }
 
-.nav-link a {
+.nav-link a, .nav-link p {
   color: var(--tab-links-shadow);
   text-transform: uppercase;
 }
@@ -217,7 +233,7 @@ a:hover {
   text-shadow: .1rem .1rem var(--tab-links-shadow);
 }
 
-.tab:hover .nav-link a {color: var(--tab-links);}
+.tab:hover .nav-link a, .tab:hover .nav-link p {color: var(--tab-links);}
 
 .tab:hover {
   background-color: var(--tab-fade);
@@ -225,16 +241,22 @@ a:hover {
 
 .container {
   position: fixed;
-  top: 40%;
+  top: 32%;
   margin-left: var(--post-size);
   max-width: 54rem;
   width: 64%;
   float: left;
+  transition: all 200ms ease-in;
 }
 
 .post {
   margin: 0 auto;
   max-width: var(--post-size);
+}
+
+.post-wrap {
+  max-height: 18.2rem;
+  overflow: hidden scroll;
 }
 
 .divider {
