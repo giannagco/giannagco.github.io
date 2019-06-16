@@ -4,10 +4,24 @@
   <title>gianna's site</title>
   <link rel="shortcut icon" href="snek64.png"/>
   <link rel="stylesheet" href="styles.css" />
+  <script type="text/javascript" src="jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#contact-info").hide();
+    $(".contact").click(function(){
+      $("#contact-info").show(500);
+      $("#index-info").hide(500);
+    });
+    $(".index").click(function(){
+      $("#contact-info").hide(500);
+      $("#index-info").show(500);
+    });
+  });
+  </script>
 </head>
 <body>
   <div class="sidebar">
-    <div class="side-title"><a href="/">gianna cortes</a></div>
+    <div class="side-title"><a href="http://giannagco.github.io">gianna cortes</a></div>
     <div class="title-border"></div>
     <div class="side-info">
       <div class="desc-wrap"><div class="desc"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mattis vulputate enim nulla aliquet. A iaculis at erat pellentesque adipiscing commodo.</p></div></div>
@@ -15,11 +29,11 @@
     <div class="nav">
       <div class="tab">
         <div class="nav-box"><i></i><b></b></div>
-        <div class="nav-link"><a href="/" class="not">new game</a></div>
+        <div class="nav-link index"><p>new game</p></div>
       </div>
       <div class="tab">
         <div class="nav-box"><i></i><b></b></div>
-        <div class="nav-link"><a href="/" class="not">contact</a></div>
+        <div class="nav-link contact"><p>contact</p></div>
       </div>
       <div class="tab">
         <div class="nav-box"><i></i><b></b></div>
@@ -35,9 +49,17 @@
   <div class="container">
     <div class="post">
       <div class="divider"><i></i><b></b></div>
-      <p>
-        ropesnek
-      </p>
+      <div class="post-wrap">
+        <div id="index-info">
+          ropesnek
+        </div>
+        <div id="contact-info">
+          <h3><b>contact me!</b></h3><br />
+          email: giannagcortes@gmail.com<br />
+          mobile: x<br />
+          discord: gianna#6310<br />
+        </div>
+      </div>
       <div class="divider"><i></i><b></b></div>
     </div>
   </div>
