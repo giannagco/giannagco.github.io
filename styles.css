@@ -72,10 +72,9 @@ a:hover{
   clear: both;
 }
 
-.side-title a {
-  font-size: 1.6em;
+.side-title a {font-size: 1.6em;}
 
-}
+.side-title a:hover {color: var(--body-font);}
 
 .title-border {
   background-color: var(--borders);
