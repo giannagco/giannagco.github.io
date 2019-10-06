@@ -275,6 +275,8 @@ a:hover{
   overflow: hidden scroll;
 }
 
+#index-info {line-height: 1.6;}
+
 #contact-info {display:none;}
 
 .divider {
