@@ -117,8 +117,6 @@ a:hover{
   width: 100%;
 }
 
-.nav-link p {cursor: pointer;}
-
 .tab {
   background-color: rgba(115, 182, 230, 0);
   position: relative;
@@ -193,6 +191,7 @@ a:hover{
 }
 
 .nav-link p {
+  cursor: pointer;
   color: var(--tab-links-shadow);
   text-transform: uppercase;
 }
